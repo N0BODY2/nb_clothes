@@ -13,7 +13,7 @@ Features
 
 **As every NB Script you dont have to touch the code itself just config**
 
-Support Discord
+## Support Discord
 
 Supported Languages CZ/SK/EN/ES
 [NB Scripts Discord](https://discord.gg/CRm3FQ8d4A)
