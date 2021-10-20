@@ -1,6 +1,10 @@
 Config = {}
 Config.Locale = 'en'
 
+-- Old = Trigger
+-- New = Legacy
+Config.ESXtype = 'Old' 
+
 Config.align = 'top-left'
 
 Languages = {

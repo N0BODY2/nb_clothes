@@ -1,6 +1,8 @@
-ESX = nil
+if Config.ESXtype == 'Old' then
+	ESX = nil
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+end
 
 RegisterNetEvent('nb_clotheshop:server:saveOutfit')
 AddEventHandler('nb_clotheshop:server:saveOutfit', function(label, skin)

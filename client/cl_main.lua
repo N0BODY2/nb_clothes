@@ -1,26 +1,19 @@
+if Config.ESXtype == 'Old' then
+	ESX = nil
+	Citizen.CreateThread(function()
+		while ESX == nil do
+			TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+			Citizen.Wait(0)
+		end
+	end)
+end
 
-ESX = nil
-local PlayerData = {}
 local wasinshop 
-
-Citizen.CreateThread(function()
-    while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
-    end
-
-    while ESX.GetPlayerData().job == nil do
-        Citizen.Wait(10)
-    end
-
-    PlayerData = ESX.GetPlayerData()
-end)
 
 function OpenShopMenu(type,price,obleceni)
 	ESX.UI.Menu.CloseAll()
 	local clothesinshop = obleceni
 	local cena = price
-	print(clothesinshop)
 	if type == 'Clothing' then	  
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop_main', {
 			title    = Languages[Config.Locale]['main_menu'],
