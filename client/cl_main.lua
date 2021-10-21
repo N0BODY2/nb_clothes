@@ -33,7 +33,7 @@ function OpenShopMenu(type,price,obleceni)
 						title = Languages[Config.Locale]['valid_this_purchase'],
 						align = Config.align,
 						elements = {
-							{label = Languages[Config.Locale]['yes'], value = 'yes'},
+							{label = Languages[Config.Locale]['yes'].. ' <span style="color:green;">' .. cena .. '$</span>', value = 'yes'},
 							{label = Languages[Config.Locale]['no'],  value = 'no'}
 					}}, function(data, menu)
 						menu.close()
@@ -149,11 +149,11 @@ function OpenShopMenu(type,price,obleceni)
 			menu.close()
 	
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop_confirm', {
-				title = Languages[Config.Locale]['valid_purchase'],
+				title = Languages[Config.Locale]['valid_this_purchase'],
 				align = Config.align,
 				elements = {
-					{label = Languages[Config.Locale]['no'],  value = 'no'},
-					{label = Languages[Config.Locale]['yes'], value = 'yes'}
+					{label = Languages[Config.Locale]['yes'].. ' <span style="color:green;">' .. cena .. '$</span>', value = 'yes'},
+					{label = Languages[Config.Locale]['no'],  value = 'no'}
 			}}, function(data, menu)
 				menu.close()
 	
