@@ -2,14 +2,15 @@ fx_version 'adamant'
 
 game 'gta5'
 
-shared_script 'imports.lua'
+shared_script {
+	'configs/*.lua',
+	'imports.lua'
+} 
 
 client_scripts {
-	'configs/*.lua',
 	'client/*.lua'
 }
 
 server_scripts {
-	'configs/*.lua',
 	'server/*.lua'
 }
