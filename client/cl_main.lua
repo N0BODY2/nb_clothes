@@ -175,9 +175,7 @@ function OpenShopMenu(type,price,obleceni)
 						end
 					end,cena)
 				elseif data.current.value == 'no' then
-					ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin)
-						TriggerEvent('skinchanger:loadSkin', skin) 
-					end)
+                                    resetskin()
 				end
 			end, function(data, menu)
 				menu.close()
