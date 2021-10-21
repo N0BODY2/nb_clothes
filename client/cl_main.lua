@@ -206,9 +206,14 @@ Citizen.CreateThread(function()
 							local editedcoords = vector3(v.coords[i].x,v.coords[i].y,v.coords[i].z-v.marker.heightedit)
 							ESX.Game.Utils.DrawText3D(editedcoords, v.text.label, v.text.scale)
 						end
-						if distance < 3 and IsControlJustPressed(0, 38) then 
-							OpenShopMenu(v.type, v.price, v.skinmenuoptions)
-							wasinshop = true
+						if distance < 3 then 
+							if v.ShowHelp then 
+								ESX.ShowHelpNotification(v.text.label)
+							end
+							if IsControlJustPressed(0, 38) then 
+								OpenShopMenu(v.type, v.price, v.skinmenuoptions)
+								wasinshop = true
+							end
 						end
 					end
 				elseif wasinshop and distance < 12 then 

@@ -67,6 +67,10 @@ Config.ObleceniShops = {
 			heightedit = 0,
 			label = Languages[Config.Locale]['access_clothing']
 		},
+		ShowHelp = {
+			active = true,
+			label = Languages[Config.Locale]['access_clothing']
+		},
 		coords = {
 			vector3(72.3, -1399.1, 28.4),
 			vector3(-703.8, -152.3, 36.4),
@@ -118,6 +122,10 @@ Config.ObleceniShops = {
 			heightedit = 0,
 			label = Languages[Config.Locale]['access_wardrobe']
 		},
+		ShowHelp = {
+			active = true,
+			label = Languages[Config.Locale]['access_clothing']
+		},
 		coords = {
 		},
 		skinmenuoptions = {
@@ -154,6 +162,10 @@ Config.ObleceniShops = {
 			scale = 0.5,
 			heightedit = 0,
 			label = Languages[Config.Locale]['access_barber']
+		},
+		ShowHelp = {
+			active = true,
+			label = Languages[Config.Locale]['access_clothing']
 		},
 		coords = {
 			vector3(-814.3, -183.8, 36.6),
