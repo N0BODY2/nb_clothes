@@ -1,6 +1,6 @@
 # nb_clothes
 
-Preview : Soon!
+Preview : [Click Here!](https://youtu.be/Y0L_0rUOVks)
 
 Features
 
