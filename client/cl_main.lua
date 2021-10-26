@@ -133,11 +133,11 @@ function OpenShopMenu(type,price,obleceni)
 					  title    = Languages[Config.Locale]['delete_savedfits'],
 					  align    = Config.align,
 					  elements = elements,
-					}, function(data, menu)
-						menu.close()
-						TriggerServerEvent('nb_clotheshop:server:deleteOutfit', data.current.value)	
-					end, function(data, menu)
-					  menu.close()
+					}, function(data69, menu69)
+						menu69.close()
+						TriggerServerEvent('nb_clotheshop:server:deleteOutfit', data69.current.value)	
+					end, function(data69, menu69)
+						menu69.close()
 					end)
 				end)
 			end
