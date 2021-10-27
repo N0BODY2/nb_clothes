@@ -2,6 +2,8 @@ if Config.ESXtype == 'Old' then
 	ESX = nil
 
 	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+elseif Config.ESXtype == 'New' then
+    ESX = exports['es_extended']:getSharedObject()
 end
 
 RegisterNetEvent('nb_clotheshop:server:saveOutfit')
