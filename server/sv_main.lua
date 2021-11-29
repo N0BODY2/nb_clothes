@@ -80,16 +80,9 @@ AddEventHandler('nb_clotheshop:server:deleteoutfit', function(label)
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	TriggerEvent('esx_datastore:getDataStore', 'property', xPlayer.identifier, function(store)
-		local dressing = store.get('dressing')
+		local dressing = store.get('dressing') or {}
 
-		if dressing == nil then
-			dressing = {}
-		end
-
-		label = label
-		
 		table.remove(dressing, label)
-
 		store.set('dressing', dressing)
-	end)
+    end)
 end)
